@@ -12,7 +12,7 @@ void ImageProcessing::openImage(const string& file) {
 }
 
 void ImageProcessing::transform(int imageNumber, double sx, double sy, double rot, double px, double py, double tx, double ty, bool histogram, bool negative, bool log, bool inverseLog, bool nthPower, double n) {
-    if (imageNumber < 0 || imageNumber >= images.size())
+    if (imageNumber < 0 || imageNumber >= (int)images.size())
         return;
     double h[256];
     int totalPixels = images[imageNumber].rows * images[imageNumber].cols;
